@@ -3,8 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void main(int)
-{
+void main(int){
     char CustomerName[15], Name[10][15];
     int Quantity[10], NumberOfItems, i;
     float UnitPrice[10], TotalPrice[10], TotalAmount;
