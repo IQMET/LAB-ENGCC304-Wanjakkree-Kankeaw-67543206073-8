@@ -6,7 +6,6 @@ int main() {
 
     printf("Enter value:");
     scanf("%d", &N);
-
     if (N%2== 0) {
         printf("Series:");
         for (i = N; i >= 0; i -= 2) {
