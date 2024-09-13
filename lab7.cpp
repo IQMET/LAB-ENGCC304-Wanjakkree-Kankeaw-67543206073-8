@@ -11,9 +11,9 @@ int main(){
     int high = 100 ;
     int x = 100 ;
 
-    srand( time(NULL) ) ;
+    srand(time(NULL)) ;
     printf( "Do you want to play game (1=play,-1=exit)" ) ;
-    scanf( "%d" , &n) ;
+    scanf("%d", &n) ;
 
     if (n == 1)
     {
@@ -24,21 +24,17 @@ int main(){
             printf ( "Guess the winning number (%d-%d)\n" , low , high ) ;
             scanf ( "%d" , &Number) ;
 
-            if ( Number != random ){
+            if (Number != random){
                 x = x - 10 ;
-                if ( Number > random )
+                if (Number > random)
                 {
                     printf ( "Sorry, the winning number is LOWER than %d. (Score=%d)\n" , Number, x ) ;
-                    if ( Number < high ){ 
-                        high = Number - 1 ;
-                    }
+                    high = Number - 1 ;
                 }//end if
-                else if ( Number < random )
+                else if (Number < random)
                 {
                     printf ( "Sorry, the winning number is HIGHER than %d. (Score=%d)\n" , Number, x ) ;
-                    if ( Number > low ){
-                        low = Number + 1 ;
-                    }
+                    low = Number + 1 ;
                 }//end else if
                 if ( x <= 0)
                 {
@@ -46,7 +42,8 @@ int main(){
                     break ;
                 }//end if
             }//end if
-        } while ( Number != random ) ; //end do while
+        } while (Number != random) ;
+        //end do while
         printf ( "The winning number is %d. Score this game: %d\n" , random, x) ;
     }// end if
 
